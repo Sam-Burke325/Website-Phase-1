@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<!-- This document contains nearly all of the components taught in the learn-html.org page and is 
+  meant to provide as an example for future projects -->
+
+<html>
+  <head>
+    <!-- The head seems to hold all the CSS components as well as formatting of various things on
+      the page when coded in the body, for example, the various fonts, languages etc., as well as code 
+      that is first checked and ran when the webpage is first opened such as the screen size and other 
+      things -->
+
+    <title>HTML Basics</title>
+    <!-- This is the title of the page tab on the top of the screen -->
+
+    <style>
+      /*
+        The texts below were notes taken from my home page regarding CSS code relating to the SVGs
+        I had used to create icons on the homepage of my website
+      */
+
+      /* 
+      The follow text is being used help me remember various aspects of HTML and CSS as I learn
+      and create this website. Should this text still be here in the finished product as someone
+      happens to look through the page sources, please notify me at s8burke@uwaterloo.ca as soon
+      as possible so I may remove this text. Thank you
+      */
+
+      /* This SVG uses 'fill' to define the main icon's color instead of 'color' */
+      /* 
+      'padding' defines the size of the border around the element
+      'border-radius' defines how round the corners of the border is around the element
+      'border-width' defines how thick the border is around the element
+      'border-style' is self explanatory
+      When inserting an SVG, sometimes the width, height and fill may be defined in the SVG
+      however, this code can be taken out and put into the CSS defined styles of the element
+      */
+    </style>
+
+    <style>
+      .nice {
+        font-family: sans-serif;
+      }
+    </style>
+    <!-- Classes are defined using the . followed by the name of the class and then its parameters which
+      defines the CSS styles that will be applied to the HTML elements in the code using selectors each
+      HTML element can have a set order of classes with each class potentially adding sets of CSS
+      definitions -->
+
+    <style>
+      .nice2 {
+        font-size: 20px;
+      }
+    </style>
+
+    <style>
+      h2,
+      h4 {
+        color: crimson;
+      }
+      p.greenText {
+        color: forestgreen;
+      }
+      p#purpleText {
+        color: purple;
+      }
+      p#blueText {
+        color: blue;
+      }
+    </style>
+    <!-- This is an example of a CSS selector which selects every <h2></h2> heading in the code 
+      changes their text colours to whatever is defined. Other parameters can be defined such as 
+      orientations, font etc. In order to access the CSS stylesheet changes, you just need to make
+      an <h2></h2> header in this instance -->
+
+    <style>
+      .strongorange strong {
+        color: orange;
+      }
+    </style>
+    <!-- In this instance, a paragraph or header not defined under the class 'strongorange' but has
+      a section of text including the 'strong' class will simply bold the highlighted text, however
+      Defining a paragraph or header to be apart of the strongorange class will make the text surrounded
+      by the 'strong' definition will bold the text and make it orange -->
+    <!-- Here, 'strong' is a child selector to 'strongorange' -->
+
+    <style>
+      .strongblue > strong {
+        color: royalblue;
+      }
+    </style>
+    <!-- This is the example of the class with a child selector as appose to the ancestor selector
+      example above -->
+
+    <style>
+      a.click-unclickedlink:link {
+        color: skyblue;
+      }
+      a.click-unclickedlink:visited {
+        color: yellowgreen;
+      }
+    </style>
+    <!-- This is an example of a psuedo-class in HTML in which an element can change state or be applied
+      to a specific set of elements by their heirarchy -->
+
+    <style>
+      p.hoverParagraph:hover {
+        color: crimson;
+      }
+    </style>
+    <!-- The above is an example of a hover psuedo-class in which the element changes once a mouse is 
+      hovering above-->
+
+    <style>
+      a.boldAfterClick:active {
+        font-weight: bold;
+      }
+      p.changedTargetColour:target {
+        color: crimson;
+      }
+    </style>
+    <!-- These psuedo-classes work to make a clickable piece of text bold once being clicked, as well
+      as change the colour of the target text from standard black to crimson -->
+
+    <style>
+      input.inputText:focus {
+        font-weight: bold;
+      }
+    </style>
+    <!-- This pseudo-class works to bold the focused element -->
+  </head>
+
+  <!-- <link rel="Stylesheet" href="nice.css" /> -->
+  <!-- Using <link> allows you to pull other external files so long as they are in the same directory -->
+  <!-- With these you are able to use different stylesheets that may not be on your device but on a file -->
+
+  <body>
+    <!-- The body is where most, if not all webpage content goes as far as I know right now -->
+
+    <h1>Heading 1</h1>
+    <!-- Headers go from h1-h6 with the text getting smaller and less important towards h6 -->
+
+    <p>This is an example of a paragraph to compliment the first heading.</p>
+    <!-- paragraph text can go here ^ and the text is unbolded unlike the headers -->
+
+    <a href="#faq">Click here to read about Frequent Asked Questions</a>
+    <!-- ^ This is where you redirect someone to different parts of the same page. The #___
+      is the id of the section of the same page to be redirected to, to which you must denote in
+      code later along with a comprehensive title -->
+    <!-- <a></a> denotes a link -->
+
+    <hr />
+    <!-- This is a break/line in the webpage, formally called a horizontal ruler -->
+
+    <h3 id="faq">Frequently Asked Questions</h3>
+    <!-- This is where the #___ from above will take you if on the same page -->
+
+    <h6>What is your instagram?</h6>
+    <a href="https://www.instagram.com/samburke_/">Click here to follow me!</a>
+    <!-- This is a link that will direct to another page and is denoted by the "___" after an href -->
+
+    <!-- <div></div> denotes a page division -->
+    <!-- <span></span> denotes a text span-->
+    <!-- "id" denotes the unique ID of an element in a page -->
+    <!-- "class" denotes the CSS class of an element -->
+    <!-- "style" denotes the CSS styles to apply to the element and is usually where the CSS 
+            code goes -->
+    <!-- data-x attributes is a general prefix for attributes that store raw information for 
+            programmatic purposes -->
+
+    <p>Here is a list of ordered items:</p>
+    <ol type="1" style="list-style-type: square;">
+      <!-- To create an unordered list, us the syntax <ul></ul> -->
+      <!-- type="1,A,a,I,i" are all different ways to count the list -->
+      <!-- style="list-style-type: disc,circle,square,none" are all different CSS style attributes -->
+      <li>First item</li>
+      <!-- <li></li> are list compenents -->
+      <li>Second item</li>
+      <li>Third item</li>
+    </ol>
+
+    <img
+      src="LinkedIn Profile Pic (From HSM Photoshoot).jpg"
+      style="float: left; width: 250px;"
+      alt="A picture of Sam Burke"
+    />
+    <!-- This is how images are handled in HMTL. Images can alert onload using the onload="" command.
+      It should be noted that any external files being called upon in the code should be in the same
+      directory as the this code, in this case, the same file, 'Website I' -->
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <p class="clear: both">Second paragraph</p>
+
+    <p>This is default serif font.</p>
+    <p style="font-family: sans-serif;">This is sans serif font.</p>
+    <!-- This is how you define a CSS style using the inline method. NEVER DO THIS. For the more 
+      proper method to using CSS styles, look to the <head></head> -->
+    <p class="nice">
+      This is the same font but properly called upon in the code
+    </p>
+
+    <p id="mytext">My text</p>
+    <script>
+      var element = document.getElementById('mytext');
+      element.classList.add('nice');
+      element.classList.remove('nice');
+      element.classList.toggle('nice');
+
+      if (element.classList('nice')) {
+        alert("The element contains the 'nice' class");
+      }
+    </script>
+    <!-- The above set of code contains a paragraph labelled with the ID, 'mytext.' The following 
+      script below it creates a variable called 'element' which has been linked to the paragraph
+      'mytext' using the document.getElementByID('mytext') such that the text itself can have its
+      CSS style changed using the classList function, following a command such as add, remove or 
+      toggle. The final piece of code below it is a function to check if 'mytext', here known as 
+      'element' contains the class, 'nice'. In simple terms, the function is checking to see if the
+      text font is as it should be defined by the 'nice' class, in this case, sans-serif -->
+
+    <h2>
+      This text should be crimson coloured based on the CSS style I defined in the head of this program.
+    </h2>
+    <h4>
+      This text should also be crimson as this was defined in the same instance as the above header except that this one
+      was defined using a comma after defining h2
+    </h4>
+    <p class="greenText">This text should be green</p>
+    <p id="purpleText" class="example">This text should be purple</p>
+    <p id="blueText">This text should be blue</p>
+
+    <p>
+      This is the <power>first<strong> (1st)</strong></power> sentence.
+    </p>
+    <!-- In this sentence, '(1st)' is bolded -->
+    <p class="strongorange">
+      This is the <power>second <strong>(2nd)</strong></power> sentence.
+    </p>
+    <!-- In this sentence, '(2nd)' is bolded and orange despite <strong></strong> being within 
+     the <power></power> element because <strong></strong> in this instance is an ancestor and
+      not a direct child to the strongorange class -->
+
+    <p>
+      This is the <power>1st <strong> (first)</strong></power> sentence.
+    </p>
+    <!-- Here, '(first)' is bolded -->
+    <p class="strongblue">
+      This is the <power>2nd <strong> (second)</strong></power> sentence.
+    </p>
+    <!-- Here however, since strong was defined as a child selector with a '>' as appose to
+      a ' (space)' as an ancestor selector like in 'strongorange' and since <strong></strong>
+      is defined within <power></power>, then the word (second) will not be blue as the class
+      strongblue should have defined. This is because the <strong></strong> element is meant
+      to be a direct child to strongblue in order for the text to be bolded and blue, however,
+      in this instance, <strong></strong> is a child to <power></power> and so, won't be blue -->
+
+    <p class="nice2">This is a nice2 paragraph</p>
+    <p class="nice2">This is a second nice2 paragraph</p>
+    <p font-size="20px">This is a standard paragraph</p>
+    <p>Comparison standard paragraph</p>
+    <script>
+      var firstNice2Paragraph = document.querySelector('.nice2');
+      firstNice2Paragraph.style.color = 'blue';
+      // If querySelectorAll was used, then every <p class="nice2"> *text* </p> paragraph would
+    </script>
+    <!-- The above is another way to use selector on a specified paragraph or paragraphs using the 
+      document.querySelector(All) command -->
+
+    <div>
+      <a href="https://www.instagram.com/samburke_/">This is a standard link which will become purple once clicked</a>
+    </div>
+
+    <div>
+      <a class="click-unclickedlink" href="https://www.instagram.com/samburke_/"
+        >This is a special link will change from a skyblue to a yellowgreen (Note that this link has already been
+        clicked so it should already look yellowgreen, same with the above link)
+      </a>
+    </div>
+
+    <div>
+      <p class="hoverParagraph">
+        By hovering your mouse over this paragraph, the text changes colour from black to crimson
+      </p>
+    </div>
+
+    <div>
+      <p>
+        <a class="boldAfterClick" href="#example"
+          >This text should be unbolded before clicking and bolded while being clicking</a
+        >
+      </p>
+    </div>
+
+    <div>
+      <p class="changedTargetColour" id="example">
+        This text should be black before the link above is clicked and crimson after clicked
+      </p>
+    </div>
+
+    <div>
+      <p><input class="inputText" type="text" value="Type something here" /></p>
+    </div>
+    <!-- The above division is utilizing a 'focus' psuedo-class which bolds 
+      the text box and the text once the text box is clicked/focused on-->
+  </body>
+</html>

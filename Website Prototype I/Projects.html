@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Sam Burke" />
+    <meta name="copyright" content="Sam Burke, 2020-present" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="This will be my 'Projects' page" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mina&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jura&display=swap" />
+    <link rel="icon" href="web-favicon-i.png" />
+
+    <title>Projects - Sam Burke</title>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        color: #eee;
+        background-color: #77a9c6;
+        font-size: 14pt;
+        line-height: 1.15;
+      }
+      div {
+        display: block;
+      }
+      div#placeHolder1 {
+        display: inline-block;
+        position: relative;
+        padding: 1cm;
+        margin-top: 4em;
+        font-family: 'Mina', 'sans-serif';
+        font-style: normal;
+        font-size: 30px;
+        opacity: 0.7;
+        transition: 0.5s;
+      }
+      #placeHolder1:hover {
+        opacity: 1;
+      }
+      div#placeHolder2 {
+        display: block;
+        position: relative;
+        padding: 1cm;
+        margin: 0;
+        font-family: 'Mina', 'sans-serif';
+        font-style: normal;
+        font-size: 30px;
+        opacity: 0.7;
+        transition: 0.5s;
+      }
+      #placeHolder2:hover {
+        opacity: 1;
+      }
+      a {
+        text-decoration: underline;
+        color: inherit;
+      }
+      div.navbtn {
+        display: inline-block;
+        position: sticky;
+        position: -webkit-sticky;
+        position: fixed;
+        right: 0.8em;
+        text-align: right;
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 2.5em;
+      }
+      .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #eee;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      .sidebar a {
+        padding: 0;
+        margin-top: 1.15em;
+        margin-bottom: 1.15em;
+        text-decoration: none;
+        font-size: 25px;
+        color: #77a9c6;
+        background-color: transparent;
+        display: block;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+      }
+      .sidebar a:hover {
+        color: #77a9c6;
+      }
+      .sidebar a#pagelink {
+        font-family: 'Jura', 'sans-serif';
+        color: #000;
+      }
+      .sidebar a#pagelink:hover {
+        color: #a81818;
+      }
+      p#currentpage {
+        font-family: 'Jura', 'sans-serif';
+        font-size: 25px;
+        color: #a81818;
+        background-color: #868686;
+        margin-bottom: 0;
+        line-height: 1.5;
+      }
+      a#curpagesec {
+        font-family: 'Jura', 'sans-serif';
+        font-size: 25px;
+        color: #eee;
+        background-color: #868686;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 5px;
+        line-height: 1.5;
+      }
+      a#curpagesec:hover {
+        color: #77a9c6;
+      }
+      .sidebar .closebtn {
+        display: inline-block;
+        top: 0;
+        background-color: #eee;
+        border-color: #eee;
+        font-size: 1.05em;
+        margin-right: 35px;
+        margin-left: 115px;
+        margin-top: -19px;
+        margin-bottom: 1em;
+      }
+      @media screen and (max-height: 450px) {
+        .sidebar {
+          color: initial;
+          /* To edit later
+          padding-top: 15px;
+          */
+        }
+        .sidebar a {
+          color: initial;
+          /* To edit later
+          font-size: 18px;
+          */
+        }
+      }
+      .sidelinks {
+        margin-top: -21px;
+      }
+      .btn.btn-default {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        text-align: right;
+      }
+      .bi.bi-arrow-left-square {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        text-align: right;
+        width: 1.6em;
+        height: 1.6em;
+        fill: #eee;
+        background-color: #77a9c6;
+        opacity: 1;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 0.16em;
+        border-radius: 10px;
+        border-width: 2px;
+        border-style: solid;
+        -webkit-transition: fill 0.5s, background-color 0.5;
+        -webkit-transition-delay: 0, 0.5;
+        transition: fill 0.5s, background-color 0.5s;
+        transition-delay: 0, 0.5s;
+      }
+      .bi.bi-arrow-left-square:hover {
+        position: sticky;
+        position: -webkit-sticky;
+        opacity: 1;
+        fill: #77a9c6;
+        background-color: #eee;
+        text-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar" id="navbar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <svg
+          viewBox="-0.5 -0.5 17 17"
+          data-toggle="collapse"
+          class="bi bi-arrow-left-square"
+          xmlns="http://www.w3.org/2000/svg"
+          type="button"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"
+          />
+          <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z" />
+        </svg>
+        <div class="sidelinks">
+          <a id="pagelink" href="Home.html">Home</a>
+          <a id="pagelink" href="About.html">About</a>
+          <p id="currentpage">Projects</p>
+          <a id="curpagesec" href="#project1">Project 1</a>
+          <a id="curpagesec" href="#project2">Project 2</a>
+          <a id="curpagesec" href="#project3">Project 3</a>
+          <a id="curpagesec" href="#project4">Project 4</a>
+          <a id="pagelink" href="Sam Burke - Software Resume V7 copy.pdf">Resume</a>
+          <a id="pagelink" href="Blog.html">Blog</a>
+        </div>
+      </a>
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById('navbar').style.width = '190px';
+      }
+      function closeNav() {
+        document.getElementById('navbar').style.width = '0';
+      }
+    </script>
+    <div class="navbtn" onclick="openNav()">
+      <svg
+        viewBox="-0.5 -0.5 17 17"
+        data-toggle="collapse"
+        class="bi bi-arrow-left-square"
+        xmlns="http://www.w3.org/2000/svg"
+        type="button"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+        />
+        <path
+          fill-rule="evenodd"
+          d="M8.354 11.354a.5.5 0 0 0 0-.708L5.707 8l2.647-2.646a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708 0z"
+        />
+        <path fill-rule="evenodd" d="M11.5 8a.5.5 0 0 0-.5-.5H6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5z" />
+      </svg>
+    </div>
+    <div id="placeHolder1"> This will be my "Projects" page </div>
+    <div id="placeHolder2">Click <a href="Home.html">here</a> to return to the home page</div>
+    <div id="placeHolder2">Click <a href="About.html">here</a> to go to the 'About' page</div>
+    <div id="placeHolder2">Click <a href="Blog.html">here</a> to go to the 'Blog' page</div>
+  </body>
+</html>

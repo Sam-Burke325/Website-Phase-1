@@ -1,0 +1,209 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #eee;
+  background-color: #000;
+  font-size: 14pt;
+  line-height: 1.15;
+}
+div {
+  display: block;
+}
+div#title {
+  position: relative;
+  padding-top: 4.25cm;
+  margin: 0;
+}
+#title h1 {
+  font-family: 'Megrim', 'cursive';
+  font-style: normal;
+  font-size: 120px;
+  margin: 0 auto;
+  border-width: 0px;
+  opacity: 1;
+}
+#title h2 {
+  font-family: 'Mina', 'sans-serif';
+  font-style: normal;
+  font-size: 30px;
+}
+ul {
+  margin: 0 auto;
+  padding: 0;
+  width: unset;
+  text-align: center;
+}
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  font-family: 'cursive';
+  font-style: normal;
+  font-size: 30px;
+  color: #eee;
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+ul li:hover {
+  font-family: 'cursive';
+  font-style: normal;
+  font-size: 30px;
+}
+ul a {
+  text-decoration: none;
+  color: #eee;
+}
+p#sublink > button {
+  display: inline-block;
+  font-family: 'Libre Barcode 39';
+  font-style: normal;
+  font-size: 50px;
+  border: #000;
+  border-radius: 0.005em;
+  padding: 0.15em;
+  color: #eee;
+  background-color: #000;
+  opacity: 1;
+  -webkit-transition: color 0.5, background-color 0.5;
+  -webkit-transition-delay: 0, 0.5;
+  transition: color 0.5s, background-color 0.5s;
+  transition-delay: 0, 0.5s;
+}
+p#sublink > button:hover {
+  opacity: 1;
+  font-family: 'Libre Barcode 39 Text';
+  color: #000;
+  background-color: #eee;
+  text-shadow: none;
+}
+p#sublink > button:focus {
+  outline: 0;
+  outline-color: #000;
+}
+div#contact {
+  position: relative;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.bi.bi-envelope-fill {
+  width: 1em;
+  height: 1em;
+  fill: #eee;
+  background-color: #000;
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0.15em;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-transition: fill 0.5s, background-color 0.5;
+  -webkit-transition-delay: 0, 0.5;
+  transition: fill 0.5s, background-color 0.5s;
+  transition-delay: 0, 0.5s;
+}
+.bi.bi-envelope-fill:hover {
+  opacity: 1;
+  fill: #000;
+  background-color: #eee;
+  text-shadow: none;
+}
+.bi.bi-linkedin {
+  width: 1em;
+  height: 1em;
+  fill: #eee;
+  background-color: #000;
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0.15em;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-transition: fill 0.5s, background-color 0.5;
+  -webkit-transition-delay: 0, 0.5;
+  transition: fill 0.5s, background-color 0.5s;
+  transition-delay: 0, 0.5s;
+}
+.bi.bi-linkedin:hover {
+  opacity: 1;
+  fill: #000;
+  background-color: #eee;
+  text-shadow: none;
+}
+.bi.bi-github {
+  width: 1em;
+  height: 1em;
+  fill: #eee;
+  background-color: #000;
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0.15em;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-transition: fill 0.5s, background-color 0.5;
+  -webkit-transition-delay: 0, 0.5;
+  transition: fill 0.5s, background-color 0.5s;
+  transition-delay: 0, 0.5s;
+}
+.bi.bi-github:hover {
+  opacity: 1;
+  fill: #000;
+  background-color: #eee;
+  text-shadow: none;
+}
+.bi.bi-file-earmark {
+  width: 1em;
+  height: 1em;
+  fill: #eee;
+  background-color: #000;
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0.15em;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-transition: fill 0.5s, background-color 0.5;
+  -webkit-transition-delay: 0, 0.5;
+  transition: fill 0.5s, background-color 0.5s;
+  transition-delay: 0, 0.5s;
+}
+.bi.bi-file-earmark:hover {
+  opacity: 1;
+  fill: #000;
+  background-color: #eee;
+  text-shadow: none;
+}
+.bi.bi-calendly {
+  width: 1em;
+  height: 1em;
+  fill: #eee;
+  background-color: #000;
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0.15em;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-transition: fill 0.5s, background-color 0.5;
+  -webkit-transition-delay: 0, 0.5;
+  transition: fill 0.5s, background-color 0.5s;
+  transition-delay: 0, 0.5s;
+}
+.bi.bi-calendly:hover {
+  opacity: 1;
+  fill: #000;
+  background-color: #eee;
+  text-shadow: none;
+}
