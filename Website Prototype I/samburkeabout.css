@@ -1,0 +1,301 @@
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: #eee;
+  background-color: #000;
+  font-size: 14pt;
+  line-height: 1.15;
+}
+div {
+  display: block;
+}
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+.navbtn {
+  display: inline-block;
+  position: sticky;
+  position: -webkit-sticky;
+  position: fixed;
+  right: 0.45em;
+  font-size: 1.4em;
+  text-align: right;
+  top: 1.85em;
+  z-index: 1030;
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #eee;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1060;
+}
+.sidebar a {
+  padding: 0;
+  margin-top: 1.15em;
+  margin-bottom: 1.15em;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  background-color: transparent;
+  display: block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.sidebar a:hover {
+  color: #eee;
+}
+.sidebar #pagelink {
+  font-family: 'Jura', 'sans-serif';
+  color: #000;
+}
+.sidebar #pagelink:hover {
+  color: #a81818;
+}
+#currentpage {
+  font-family: 'Jura', 'sans-serif';
+  font-size: 25px;
+  color: #a81818;
+  background-color: #868686;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+#curpagesec {
+  font-family: 'Jura', 'sans-serif';
+  font-size: 25px;
+  color: #eee;
+  background-color: #868686;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  line-height: 1.5;
+}
+#curpagesec:hover {
+  color: #000;
+}
+.sidebar .closebtn {
+  display: inline-block;
+  top: 0;
+  background-color: #eee;
+  border-color: #eee;
+  font-size: 1.5em;
+  margin-right: 35px;
+  margin-left: 115px;
+  margin-top: -19px;
+  margin-bottom: 1em;
+}
+.btn.btn-default {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  text-align: right;
+}
+.bi.bi-arrow-left-square {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  text-align: right;
+  width: 1.6em;
+  height: 1.6em;
+  fill: #eee;
+  background-color: #000;
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0.16em;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-transition: fill 0.5s, background-color 0.5;
+  -webkit-transition-delay: 0, 0.5;
+  transition: fill 0.5s, background-color 0.5s;
+  transition-delay: 0, 0.5s;
+}
+.bi.bi-arrow-left-square:hover {
+  position: sticky;
+  position: -webkit-sticky;
+  opacity: 1;
+  fill: #000;
+  background-color: #eee;
+  text-shadow: none;
+}
+.bi.bi-arrow-right-square {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  text-align: right;
+  width: 1.6em;
+  height: 1.6em;
+  fill: #eee;
+  background-color: #000;
+  opacity: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0.16em;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-transition: fill 0.5s, background-color 0.5;
+  -webkit-transition-delay: 0, 0.5;
+  transition: fill 0.5s, background-color 0.5s;
+  transition-delay: 0, 0.5s;
+}
+.bi.bi-arrow-right-square:hover {
+  position: sticky;
+  position: -webkit-sticky;
+  opacity: 1;
+  fill: #000;
+  background-color: #eee;
+  text-shadow: none;
+}
+.titleline {
+  top: 2.2em;
+}
+.title {
+  font-family: 'Major Mono Display', 'monospace';
+  font-style: normal;
+}
+.paragraphs {
+  text-align: center;
+  font-family: 'Raleway', 'open-sans';
+  font-style: normal;
+  font-size: 16pt;
+}
+.picture {
+  padding: 0px;
+}
+#profpic {
+  border-style: solid;
+  border-color: #eeeeee8f;
+  border-width: 5px;
+  border-radius: 30px;
+  width: 300px;
+  right: 1em;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+#musicimg1,
+#musicimg2,
+#eduimg1,
+#eduimg2 {
+  border-style: solid;
+  border-color: #eeeeee8f;
+  border-width: 5px;
+  border-radius: 20px;
+  width: 475px;
+  margin-top: 2em;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+#profpic:hover,
+#musicimg1:hover,
+#musicimg2:hover,
+#eduimg1:hover,
+#eduimg2:hover {
+  border-color: #eee;
+}
+@media (min-width: 1041px) {
+  .title {
+    font-size: 96px;
+  }
+  .title#edutitle {
+    font-size: 79px;
+  }
+  #musicpar2,
+  #edupar2 {
+    top: 2em;
+  }
+  #musicimg2,
+  #eduimg2 {
+    margin-top: 4em;
+  }
+}
+@media (max-width: 1200px) {
+  .title {
+    font-size: 79.5px;
+  }
+  .title#edutitle {
+    font-size: 62.5px;
+  }
+  .titleline {
+    top: 2em;
+  }
+  #musicpar2,
+  #edupar2 {
+    top: 2em;
+  }
+  #musicimg2,
+  #eduimg2 {
+    margin-top: 4em;
+  }
+}
+@media (max-width: 992px) {
+  .title {
+    font-size: 57.8px;
+  }
+  .title#edutitle {
+    font-size: 48.5px;
+  }
+  .titleline {
+    top: 1.4em;
+  }
+  #intropar {
+    padding-bottom: 1rem;
+    top: -2em;
+  }
+  #musicpar2,
+  #edupar2 {
+    padding-bottom: 1rem;
+    top: 0em;
+  }
+  #musicimg2,
+  #eduimg2 {
+    margin-top: 2rem;
+  }
+  #edupar1,
+  #edupar2 {
+    top: -2em;
+  }
+  .paragraphs#edupar .picture {
+    top: -2em;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 41.3px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .title#edutitle {
+    font-size: 38.5px;
+  }
+  .titleline {
+    top: 0.9em;
+  }
+}
+@media (max-width: 576px) {
+  .title {
+    font-size: 41.5px;
+  }
+  .paragraphs {
+    font-size: 13pt;
+  }
+  #musicimg1,
+  #musicimg2,
+  #eduimg1,
+  #eduimg2 {
+    width: 400px;
+  }
+}
