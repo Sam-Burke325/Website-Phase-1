@@ -1,13 +1,12 @@
 html,
 body {
-  box-sizing: border-box;
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
   text-align: center;
   color: #eee;
-  background-color: #000;
+  background-color: #77a9c6;
   font-size: 14pt;
   line-height: 1.15;
 }
@@ -64,7 +63,8 @@ a {
   font-size: 25px;
   color: #a81818;
   background-color: #868686;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0em;
   line-height: 1.5;
 }
 #curpagesec {
@@ -93,7 +93,7 @@ a {
   width: 1.6em;
   height: 1.6em;
   fill: #eee;
-  background-color: #000;
+  background-color: #77a9c6;
   opacity: 1;
   margin-bottom: -0.25em;
   padding: 0.16em;
@@ -107,7 +107,7 @@ a {
 }
 .bi.bi-arrow-left-square:hover {
   opacity: 1;
-  fill: #000;
+  fill: #77a9c6;
   background-color: #eee;
 }
 .bi.bi-arrow-right-square {
@@ -116,11 +116,11 @@ a {
   width: 1.6em;
   height: 1.6em;
   fill: #eee;
-  background-color: #000;
+  background-color: #77a9c6;
   opacity: 1;
   padding: 0.16em;
   border-radius: 10px;
-  border-width: 2px;
+  border-width: 0;
   border-style: solid;
   -webkit-transition: fill 0.5s, background-color 0.5;
   -webkit-transition-delay: 0, 0.5;
@@ -129,7 +129,7 @@ a {
 }
 .bi.bi-arrow-right-square:hover {
   opacity: 1;
-  fill: #000;
+  fill: #77a9c6;
   background-color: #eee;
 }
 .titleline {
@@ -145,38 +145,46 @@ a {
   font-style: normal;
   font-size: 16pt;
 }
-.picture {
-  padding: 0px;
+.project_placeholder {
+  text-align: center;
+  font-family: 'Raleway', 'open-sans';
+  font-style: normal;
+  font-size: 30px;
 }
-#profpic {
-  border-style: solid;
-  border-color: #eeeeee8f;
-  border-width: 5px;
-  border-radius: 30px;
-  width: 300px;
-  right: 1em;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-}
-#musicimg1,
-#musicimg2,
-#eduimg1,
-#eduimg2 {
-  border-style: solid;
-  border-color: #eeeeee8f;
-  border-width: 5px;
-  border-radius: 20px;
-  width: 475px;
-  margin-top: 2em;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-}
-#profpic:hover,
-#musicimg1:hover,
-#musicimg2:hover,
-#eduimg1:hover,
-#eduimg2:hover {
+.project_pic {
+  background-size: auto 200%;
+  background-position-x: center;
+  background-position-y: center;
+  overflow: hidden;
+  border-radius: 10px;
+  border-width: 3px;
   border-color: #eee;
+  border-style: solid;
+  height: 20em;
+  transition: all 0.2s ease, background-position 0ms;
+  background-size: auto 200%;
+  opacity: 0.8;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.project_pic:hover {
+  background-size: auto 205%;
+  opacity: 1;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+.project_title {
+  position: absolute;
+  left: 1em;
+  top: 50%;
+  bottom: 50%;
+  font-family: 'Jura';
+  font-size: 4rem;
+  line-height: 0;
+  text-decoration: none;
+  color: #eee;
+  text-shadow: 4px 4px 12px #000;
 }
 ul {
   margin: 0;
@@ -197,7 +205,7 @@ ul a {
   width: 3em;
   height: 3em;
   fill: #eee;
-  background-color: #000;
+  background-color: #77a9c6;
   margin-left: 10px;
   margin-right: 10px;
   padding: 0.15em;
@@ -210,14 +218,14 @@ ul a {
   transition-delay: 0, 0.5s;
 }
 .bi.bi-envelope-fill:hover {
-  fill: #000;
+  fill: #77a9c6;
   background-color: #eee;
 }
 .bi.bi-linkedin {
   width: 3em;
   height: 3em;
   fill: #eee;
-  background-color: #000;
+  background-color: #77a9c6;
   margin-left: 10px;
   margin-right: 10px;
   padding: 0.15em;
@@ -230,14 +238,14 @@ ul a {
   transition-delay: 0, 0.5s;
 }
 .bi.bi-linkedin:hover {
-  fill: #000;
+  fill: #77a9c6;
   background-color: #eee;
 }
 .bi.bi-github {
   width: 3em;
   height: 3em;
   fill: #eee;
-  background-color: #000;
+  background-color: #77a9c6;
   margin-left: 10px;
   margin-right: 10px;
   padding: 0.15em;
@@ -250,14 +258,14 @@ ul a {
   transition-delay: 0, 0.5s;
 }
 .bi.bi-github:hover {
-  fill: #000;
+  fill: #77a9c6;
   background-color: #eee;
 }
 .bi.bi-file-earmark {
   width: 3em;
   height: 3em;
   fill: #eee;
-  background-color: #000;
+  background-color: #77a9c6;
   margin-left: 10px;
   margin-right: 10px;
   padding: 0.15em;
@@ -270,14 +278,14 @@ ul a {
   transition-delay: 0, 0.5s;
 }
 .bi.bi-file-earmark:hover {
-  fill: #000;
+  fill: #77a9c6;
   background-color: #eee;
 }
 .bi.bi-calendly {
   width: 3em;
   height: 3em;
   fill: #eee;
-  background-color: #000;
+  background-color: #77a9c6;
   margin-left: 10px;
   margin-right: 10px;
   padding: 0.15em;
@@ -290,15 +298,12 @@ ul a {
   transition-delay: 0, 0.5s;
 }
 .bi.bi-calendly:hover {
-  fill: #000;
+  fill: #77a9c6;
   background-color: #eee;
 }
 @media (min-width: 1041px) {
   .title {
-    font-size: 96px;
-  }
-  .title#edutitle {
-    font-size: 79px;
+    font-size: 91px;
   }
   .title#contacttitle {
     font-size: 68px;
@@ -306,21 +311,10 @@ ul a {
   .titleline#smtitleline {
     top: 1.8em;
   }
-  #musicpar2,
-  #edupar2 {
-    top: 2em;
-  }
-  #musicimg2,
-  #eduimg2 {
-    margin-top: 4em;
-  }
 }
 @media (max-width: 1200px) {
   .title {
-    font-size: 79.5px;
-  }
-  .title#edutitle {
-    font-size: 62.5px;
+    font-size: 76px;
   }
   .title#contacttitle {
     font-size: 56px;
@@ -331,21 +325,10 @@ ul a {
   .titleline#smtitleline {
     top: 1.4em;
   }
-  #musicpar2,
-  #edupar2 {
-    top: 2em;
-  }
-  #musicimg2,
-  #eduimg2 {
-    margin-top: 4em;
-  }
 }
 @media (max-width: 992px) {
   .title {
-    font-size: 57.8px;
-  }
-  .title#edutitle {
-    font-size: 48.5px;
+    font-size: 55.5px;
   }
   .title#contacttitle {
     font-size: 40.5px;
@@ -356,35 +339,12 @@ ul a {
   .titleline#smtitleline {
     top: 0.9em;
   }
-  #intropar {
-    padding-bottom: 1rem;
-    top: -2em;
-  }
-  #musicpar2,
-  #edupar2 {
-    padding-bottom: 1rem;
-    top: 0em;
-  }
-  #musicimg2,
-  #eduimg2 {
-    margin-top: 2rem;
-  }
-  #edupar1,
-  #edupar2 {
-    top: -2em;
-  }
-  .paragraphs#edupar .picture {
-    top: -2em;
-  }
 }
 @media (max-width: 768px) {
   .title {
-    font-size: 41.3px;
+    font-size: 44px;
     padding-left: 5px;
     padding-right: 5px;
-  }
-  .title#edutitle {
-    font-size: 38.5px;
   }
   .title#contacttitle {
     font-size: 33px;
@@ -398,7 +358,7 @@ ul a {
 }
 @media (max-width: 576px) {
   .title {
-    font-size: 41.5px;
+    font-size: 40.5px;
   }
   .title#contacttitle {
     font-size: 32px;
@@ -408,11 +368,5 @@ ul a {
   }
   .paragraphs {
     font-size: 13pt;
-  }
-  #musicimg1,
-  #musicimg2,
-  #eduimg1,
-  #eduimg2 {
-    width: 400px;
   }
 }
